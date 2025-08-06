@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://png.pngtree.com/background/20250108/original/pngtree-hidden-library-carved-within-a-mountain-featuring-warm-lighting-historic-books-picture-image_16150329.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #f8e5c0;
+}
+
+.wrapper, .signup {
+    width: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    color: #f8e5c0;
+    border-radius: 12px;
+    padding: 30px 40px;
+}
+
+.wrapper h1, .signup header {
+    font-size: 36px;
+    text-align: center;
+    color: #ffdd99;
+}
+
+.input-box, .field.input-field {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-box input, .field.input-field input, .field.input-field .input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff8e5;
+    padding: 10px 45px 10px 20px;
+}
+
+.input-box input::placeholder, .field.input-field input::placeholder {
+    color: #fce5b2;
+}
+
+.input-box i, .field.input-field i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fce5b2;
+}
+
+.btn, .field.button-field button {
+    width: 100%;
+    height: 45px;
+    background: #ffc966;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #3b2f1e;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover, .field.button-field button:hover {
+    background: #ffbb55;
+}
+
+.register-link, .form-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #ffecc2;
+}
+
+.register-link p a, .form-link a {
+    color: #ffdd99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover, .form-link a:hover {
+    text-decoration: underline;
+}
+
+.toast {
+    position: fixed;
+    right: 650px;
+    bottom: 500px;
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 300px;
+    max-width: 400px;
+    animation: slideInOut 3.3s ease-in-out forwards;
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.toast i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* CSS mới cho thông báo lỗi ở góc phải trong input */
+.error {
+    color: #ff6b6b;
+    font-size: 0.75em;
+    position: absolute;
+    right: 50px; /* Cách icon một chút */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none; /* Không ảnh hưởng đến việc click input */
+}
